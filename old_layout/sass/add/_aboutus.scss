@@ -1,0 +1,79 @@
+/////////////////////////////// О НАС
+#aboutus {
+	$bg: $bg_light;
+
+	background: $bg - 5;
+
+	.content {
+		position: relative;
+		border-right: 1px solid $bg - 10;
+		border-left:   1px solid $bg - 10;
+		background: url("../img/fon_logos_light.png") center no-repeat $bg;
+		background-position: cover;
+	}
+	
+	p, li {
+		padding-right: 20%; 
+	}
+
+	p, li,
+	span.important {
+		font-weight: 300;
+	}
+
+	p {
+		margin: 20px;
+		text-indent: 1em;
+	}
+
+	span.important {
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	ul {
+		list-style: circle;
+		margin-left: 70px;
+	}
+
+	ul.social {
+		display: block;
+		position: absolute;
+		right: 10%;
+		top: 27%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			$size_icon: 60px;
+
+			display: block;
+			width: $size_icon;
+			height: $size_icon;
+			margin: 0;
+			margin-bottom: 15px;
+			padding: 0;
+			border-radius: 50%;
+			border: 1px solid $bg_firm - 30 ;
+
+			&:hover {
+				border: 1px solid transparent;
+			}
+		}
+
+		svg {
+			.facebook, .vk, .google, .mail, .white { @extend %animation; }
+			.white { fill: $firm_normal; }
+			.facebook, .vk, .google, .mail { fill: $bg_light; }
+		}
+
+		svg:hover {
+			.white { fill: #FFF; }
+			.facebook { fill: #3B5998; }
+			.vk { fill: #4D76A1; }
+			.google { fill: #DC4E41; }
+			.mail { fill: $firm_normal; }
+		}
+	}
+}

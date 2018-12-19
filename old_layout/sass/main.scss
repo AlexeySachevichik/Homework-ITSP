@@ -1,0 +1,287 @@
+/////////////////////////////// Кодировка
+@charset "UTF-8";
+
+/////////////////////////////// Сброс настроек
+@import "add/reset";
+
+/////////////////////////////// Подключаем шрифты
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Exo2-MediumItalic.ttf") format("truetype");
+}
+
+
+/////////////////////////////// ОБЩИЕ НАСТРОЙКИ
+$bg_normal:		#FFFFFF;
+$bg_light:		#F7F7F7;
+$bg_dark:		#E9EAEE;
+$bg_firm:		#EFEEEE;
+$bg_akcent:		#7B858E;
+
+$firm_normal:		#428A98;
+$firm_light:		#50A5B5;
+$firm_dark:		#336B77;
+$firm_akcent:		#F33A3D;
+
+$font_color:		#333;
+$font_color_dark:	#000;
+$font_color_light:	#666;
+
+
+%shadow	{ box-shadow: 0 0 2px 2px rgba(0, 0, 0, .1); }
+%animation	{ transition: 0.2s; }
+%border	{ border-radius: 3px; }
+
+
+body {
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 300;
+	color: $font_color;
+	background: $bg_dark;
+}
+
+.content {
+	max-width: 1280px;
+	padding: 50px 0;
+	margin: auto;
+	background: $bg_normal;
+}
+
+/////////////////////////////// ПРЕЛОАДЕР
+@import "add/preloader";
+
+/////////////////////////////// Заголовки разделов
+h2.title {
+	/*padding: 30px 0;*/
+	margin: 0;
+	font-family: Exo;
+	font-weight: 500;
+	font-style: italic;
+	font-size: 2.7em;
+	text-align: center;
+	text-transform: uppercase;
+	color: $firm_normal;
+}
+
+h2.title:after {
+	content: "";
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+	width: 10%;
+	height: 1px;
+	background: $bg_dark;
+}
+
+
+h3.title {
+	margin: 0;
+	padding: 10px 0;
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: $firm_dark;
+}
+
+
+
+/////////////////////////////// ШАПКА
+@import "add/header";
+
+/////////////////////////////// СЛАЙДЕР
+@import "add/slider";
+
+/////////////////////////////// О НАС
+@import "add/aboutus";
+
+/////////////////////////////// УСЛУГИ
+@import "add/services";
+
+/////////////////////////////// СКАЧАТЬ
+@import "add/download";
+
+/////////////////////////////// КЛИЕНТЫ
+@import "add/clients";
+
+
+/////////////////////////////// CONTACTS
+#contacts {
+	$contacts_background: $firm_dark;
+	$contacts_fonts: $bg_light;
+	$bg: $firm_dark;
+
+
+	background: $bg - 5;
+
+	.content {
+		background: $bg;
+		border-right: 1px solid $bg - 10;
+		border-left:   1px solid $bg - 10;
+		color: $contacts_fonts;
+	}
+
+	iframe { display: block; }
+	h2.title { color: $contacts_fonts; }
+
+	.wrap {
+		margin: auto;
+		text-align: center;
+		margin: 30px 0;
+
+		.item {
+			float: left;
+			width: 33.33%;
+			padding: 20px;
+
+			h3.title { color: $contacts_fonts; }
+		}
+	}
+
+	.img {
+		height: 40px;
+		margin-bottom: 15px;
+		svg {
+			height: 100%;
+			.layer1 {
+				fill: $firm_akcent;
+			}
+
+			.layer2 {
+				fill: $contacts_background;
+			}
+		}
+	}
+	ul {
+		li {
+			font-weight: 300;
+		}
+	}
+
+	.map {
+		position: relative;
+		width: 100%;
+		height: 600px;
+	}
+}
+
+/////////////////////////////// НАПИШИТЕ НАМ
+@import "add/feedback";
+
+
+/////////////////////////////// FOOTER
+#footer {
+	$bg: $font_color;
+	background: $bg - 5;
+
+	.content {
+		background: $bg;
+		border-right: 1px solid $bg - 10;
+		border-left:   1px solid $bg - 10;
+		color: $bg_dark;
+		padding-bottom: 10px;
+	}
+
+	.item {
+		float: left;
+		width: 25%;
+		margin: 0;
+		padding: 15px;
+	}
+
+	h3.title {
+		margin: 0;
+		padding: 0;
+		text-align: left;
+
+		a {
+			font-weight: 400;
+			color: $bg_firm - 20;
+			text-decoration: none;
+			@extend %animation;
+
+			&:hover {
+				text-decoration: none;
+				color: $bg_firm - 50;
+			}
+		}
+
+	}
+
+	li {
+		a{
+			font-weight: 300;
+			color: $bg_firm - 50;
+			text-decoration: none;
+			@extend %animation;
+
+			&:hover {
+				color: $bg_firm - 80;
+				/*text-decoration: underline;*/
+			}
+		}
+	}
+
+	ul.social {
+		display: block;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			$size: 40px;
+			display: block;
+			width: $size;
+			height: $size;
+			float: left;
+			margin-right: 7px;
+		}
+
+		svg {
+			.facebook, .vk, .google, .mail, .white { @extend %animation; }
+			.white { fill: $bg_firm - 40; }
+			.facebook, .vk, .google, .mail { fill: $font_color; }
+		}
+
+		svg:hover {
+			.white { fill: #FFF; }
+			.facebook { fill: #3B5998; }
+			.vk { fill: #4D76A1; }
+			.google { fill: #DC4E41; }
+			.mail { fill: $firm_normal; }
+		}
+	}
+	
+		
+
+
+	.copyright {
+		margin: 0 auto;
+		margin-top: 40px;
+		font-weight: 300;
+		font-size: 0.8em;
+		color: $bg + 40;
+		text-align: center;
+	}
+}
+

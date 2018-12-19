@@ -1,0 +1,60 @@
+/////////////////////////////// ПРЕЛОАДЕР
+#preloader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: $bg_light;
+	z-index: 99;
+	opacity: 1;
+	visibility: visible;
+	transition: 0.4s;
+
+	&.done {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.pre_content {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 100px;
+		height: 100px;
+		
+		.pre_circle,
+		.pre_logo {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			transform: translate(-50%, -50%); /* сдвиг блока для правильного центрирования */
+		}
+
+		.pre_circle {
+			border-radius: 50%; /* из обводки делаем круг */
+			border: 5px solid $bg_dark - 30;
+			border-top-color: transparent; /* верх границы делаем прозрачным */
+			animation: 1s spin infinite linear; /* используем бесконечно анимацию, описанную ниже */
+		}
+
+		.pre_logo {
+			svg {
+				width: 100px;
+				height: 100px;
+
+				.fil0 {
+					fill:#428A98
+				}
+				.fil1 {
+					fill:#F33A3D;
+				}
+			}
+		}
+	}
+}
+
+@keyframes spin {
+	from { transform: translate(-50%, -50%) rotate(0deg); }
+	to {     transform: translate(-50%, -50%) rotate(360deg); }
+}

@@ -1,0 +1,43 @@
+/////////////////////////////// ШАПКА
+#header {
+	background: $bg_light - 5;
+
+	.content {
+		padding: 0 5%;
+		background: $bg_light;
+	}
+
+	.header_logo {
+		width: 200px;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: auto;
+			margin-top: 10px;
+
+			.fill_1 { fill: $bg_firm; }
+			.fill_2 { fill: $firm_normal; }
+			.fill_3 { fill: $firm_akcent; }
+		}
+	}
+
+	ul {
+		li { float: left; }
+
+		a {
+			display: block;
+			padding: 30px 10px;
+			font-size: 0.9em;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $firm_dark;
+			@extend %animation;
+
+			&:hover {
+				color: $firm_akcent;
+				background: $bg_light - 5;
+			}
+		}
+	}
+}
