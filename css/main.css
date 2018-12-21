@@ -547,7 +547,9 @@ header {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     #download .container .item {
       width: 31%;
       text-align: center; }
@@ -631,6 +633,8 @@ header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-bottom: 50px; }
     #contacts .container .item {
       width: 30%;
@@ -847,5 +851,89 @@ footer {
     font-size: 0.8em;
     color: #5b5b5b;
     text-align: center; }
+
+@media (max-width: 768px) {
+  h2 {
+    margin-bottom: 10px;
+    font-size: 2em; }
+
+  header .wrapper .content,
+  #slider .content,
+  #aboutus .content,
+  #services .content,
+  #download .wrapper,
+  #clients .wrapper,
+  #contacts .wrapper {
+    border-right: 0;
+    border-left: 0; }
+
+  header .wrapper .content {
+    padding: 0 10px; }
+
+  #aboutus .text_wrapper {
+    padding-right: 0; }
+    #aboutus .text_wrapper p {
+      margin: 10px; }
+  #aboutus .content {
+    padding: 10px 0; }
+  #aboutus .social_icons {
+    display: none; }
+
+  #services .content {
+    padding-top: 10px;
+    padding-bottom: 0; }
+  #services .container .item {
+    width: 100%; }
+
+  #download .wrapper .content {
+    padding: 10px; }
+  #download .container .item {
+    width: 100%;
+    margin-top: 15px;
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 15px; }
+    #download .container .item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0; }
+
+  #clients .wrapper .content {
+    padding: 10px; }
+  #clients .container .item {
+    width: 100%;
+    margin-top: 15px; }
+    #clients .container .item p {
+      display: none; }
+
+  #contacts .wrapper .content {
+    padding-top: 10px; }
+  #contacts .container {
+    margin-bottom: 10px; }
+    #contacts .container .item {
+      width: 100%;
+      margin-top: 15px; }
+      #contacts .container .item .image {
+        margin-bottom: 5px; }
+
+  footer .wrapper .content {
+    padding: 10px; }
+  footer .footer_menu .item {
+    display: none; }
+  footer .footer_menu .item.social {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  footer .copyright {
+    margin-top: 10px; } }
+@media (max-width: 992px) {
+  #clients .container .item img {
+    max-height: 80px;
+    max-width: 200px; }
+
+  #messege .inputs {
+    padding: 0px 50px; } }
 
 /*# sourceMappingURL=main.css.map */

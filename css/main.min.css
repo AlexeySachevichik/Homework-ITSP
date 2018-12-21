@@ -124,7 +124,7 @@ header nav a:hover{color:#f33a3d;background:#f2f2f2}
 #download{background:#fafafa}
 #download .wrapper{background:#fff;border-right:1px solid #f5f5f5;border-left:1px solid #f5f5f5}
 #download .wrapper .content{padding:50px}
-#download .container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+#download .container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap}
 #download .container .item{width:31%;text-align:center}
 #download .container .item .image{margin-bottom:20px;height:50px}
 #download .container .item .image svg{height:100%}
@@ -146,7 +146,7 @@ header nav a:hover{color:#f33a3d;background:#f2f2f2}
 #contacts .wrapper .content{padding-top:50px}
 #contacts iframe{display:block}
 #contacts h2{color:#f7f7f7}
-#contacts .container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:50px}
+#contacts .container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-bottom:50px}
 #contacts .container .item{width:30%;text-align:center}
 #contacts .container .item .image{margin:auto;margin-bottom:25px;width:40px;height:40px}
 #contacts .container .item .image svg{max-width:100%;max-height:100%}
@@ -202,3 +202,32 @@ footer .footer_menu .social a.facebook:hover{background:#3b5998}
 footer .footer_menu .social a.google:hover{background:#dc4e41}
 footer .footer_menu .social a.mail:hover{background:#428a98}
 footer .copyright{margin:0 auto;margin-top:40px;font-weight:300;font-size:.8em;color:#5b5b5b;text-align:center}
+@media (max-width:768px){
+h2{margin-bottom:10px;font-size:2em}
+#aboutus .content,#clients .wrapper,#contacts .wrapper,#download .wrapper,#services .content,#slider .content,header .wrapper .content{border-right:0;border-left:0}
+header .wrapper .content{padding:0 10px}
+#aboutus .text_wrapper{padding-right:0}
+#aboutus .text_wrapper p{margin:10px}
+#aboutus .content{padding:10px 0}
+#aboutus .social_icons{display:none}
+#services .content{padding-top:10px;padding-bottom:0}
+#services .container .item{width:100%}
+#download .wrapper .content{padding:10px}
+#download .container .item{width:100%;margin-top:15px;border-bottom:1px solid #f5f5f5;padding-bottom:15px}
+#download .container .item:last-child{border-bottom:0;padding-bottom:0}
+#clients .wrapper .content{padding:10px}
+#clients .container .item{width:100%;margin-top:15px}
+#clients .container .item p{display:none}
+#contacts .wrapper .content{padding-top:10px}
+#contacts .container{margin-bottom:10px}
+#contacts .container .item{width:100%;margin-top:15px}
+#contacts .container .item .image{margin-bottom:5px}
+footer .wrapper .content{padding:10px}
+footer .footer_menu .item{display:none}
+footer .footer_menu .item.social{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+footer .copyright{margin-top:10px}
+}
+@media (max-width:992px){
+#clients .container .item img{max-height:80px;max-width:200px}
+#messege .inputs{padding:0 50px}
+}
