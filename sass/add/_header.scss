@@ -3,6 +3,7 @@ header {
     
     .wrapper {
         .content {
+            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -10,6 +11,22 @@ header {
             background: $bg_light;
             border-right: 1px solid $bg_light - 10;
             border-left: 1px solid $bg_light - 10;
+        }
+    }
+
+    .header_logo_min {
+        display: none;
+        width: 50px;
+        height: 50px;
+
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            .fil0 { fill: $bg_firm; }
+            .fil1 { fill: $firm_normal; }
+            .fil2 { fill: $firm_akcent; }
         }
     }
 
@@ -28,6 +45,31 @@ header {
 
         a {
             display: block;
+        }
+    }
+
+    .toggle_menu {
+        display: none;
+        @extend %animation;
+        width: 50px;
+        height: 50px;
+        background: $bg_firm;
+        padding: 15px 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        overflow: hidden;
+
+        &:hover {
+            background: $bg_firm - 5;
+        }
+
+        .line {
+            width: 100%;
+            height: 3px;
+            background: $firm_normal;
+
+            &:nth-child(2) { margin-top: 6px; }
+            &:nth-child(3) { margin-top: 6px; }
         }
     }
 

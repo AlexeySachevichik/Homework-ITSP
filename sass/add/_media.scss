@@ -1,3 +1,22 @@
+@media (max-width: 992px) {
+	#clients {
+		.container {
+			.item {
+				img {
+					max-height: 80px;
+					max-width: 200px;
+				}
+			}
+		}
+	}
+
+	#messege {
+		.inputs {
+			padding: 0px 50px;
+		}
+	}
+}
+
 @media (max-width: 768px) {
 	h2 {
 		margin-bottom: 10px;
@@ -9,7 +28,9 @@
 	#services .content,
 	#download .wrapper,
 	#clients .wrapper,
-	#contacts .wrapper {
+	#contacts .wrapper,
+	#feedback .content,
+	footer .wrapper {
 		border-right: 0;
     	border-left: 0;
     }
@@ -19,6 +40,19 @@
     		.content {
 				padding: 0 10px;
     		}
+		}
+
+		.header_logo_min { display: block; }
+		.header_logo { display: none; }
+
+		.toggle_menu {
+			display: block;
+		}
+
+		nav {
+			position: absolute;
+			top: 100%;
+			z-index: 99;
 		}
 	}
 
@@ -114,6 +148,32 @@
 		}
 	}
 
+	#feedback {
+		.content {
+			padding: 10px;
+		}
+	}
+
+	#messege {
+		margin-top: 0;
+
+		.inputs {
+			padding: 0;
+
+			div, textarea {
+				width: 100%;
+			}
+
+			input[type="text"] {
+				margin-bottom: 15px;
+			}
+		}
+
+		input[type=submit] {
+			margin-top: 15px;
+		}
+	}
+
 	footer {
 		.wrapper {
 			.content {
@@ -138,21 +198,3 @@
 	}
 }
 
-@media (max-width: 992px) {
-	#clients {
-		.container {
-			.item {
-				img {
-					max-height: 80px;
-					max-width: 200px;
-				}
-			}
-		}
-	}
-
-	#messege {
-		.inputs {
-			padding: 0px 50px;
-		}
-	}
-}

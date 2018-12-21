@@ -203,7 +203,7 @@ input[type=button] {
   font-style: italic;
   font-weight: 500;
   src: url("../fonts/Exo2-MediumItalic.ttf") format("truetype"); }
-a.button, header nav a, #slider .arrow .arrow_button, #aboutus .social_icons a svg path, #services .container .item .noize, #download .container .item a.more,
+a.button, header .toggle_menu, header nav a, #slider .arrow .arrow_button, #aboutus .social_icons a svg path, #services .container .item .noize, #download .container .item a.more,
 #download .container .item a.more:visited, #messege input[type="text"]::-webkit-input-placeholder,
 #messege textarea::-webkit-input-placeholder, #messege input[type="submit"], footer .footer_menu .item a, footer .footer_menu .social a.vk svg path,
 footer .footer_menu .social a.facebook svg path,
@@ -211,7 +211,7 @@ footer .footer_menu .social a.google svg path,
 footer .footer_menu .social a.mail svg path {
   -webkit-transition: 0.2s;
   transition: 0.2s; }
-a.button, header nav a, #slider .arrow .arrow_button, #aboutus .social_icons a svg path, #services .container .item .noize, #download .container .item a.more,
+a.button, header .toggle_menu, header nav a, #slider .arrow .arrow_button, #aboutus .social_icons a svg path, #services .container .item .noize, #download .container .item a.more,
 #download .container .item a.more:visited, #messege input[type="text"]:-ms-input-placeholder,
 #messege textarea:-ms-input-placeholder, #messege input[type="submit"], footer .footer_menu .item a, footer .footer_menu .social a.vk svg path,
 footer .footer_menu .social a.facebook svg path,
@@ -219,7 +219,7 @@ footer .footer_menu .social a.google svg path,
 footer .footer_menu .social a.mail svg path {
   -webkit-transition: 0.2s;
   transition: 0.2s; }
-a.button, header nav a, #slider .arrow .arrow_button, #aboutus .social_icons a svg path, #services .container .item .noize, #download .container .item a.more,
+a.button, header .toggle_menu, header nav a, #slider .arrow .arrow_button, #aboutus .social_icons a svg path, #services .container .item .noize, #download .container .item a.more,
 #download .container .item a.more:visited, #messege input[type="text"]::-ms-input-placeholder,
 #messege textarea::-ms-input-placeholder, #messege input[type="submit"], footer .footer_menu .item a, footer .footer_menu .social a.vk svg path,
 footer .footer_menu .social a.facebook svg path,
@@ -227,7 +227,7 @@ footer .footer_menu .social a.google svg path,
 footer .footer_menu .social a.mail svg path {
   -webkit-transition: 0.2s;
   transition: 0.2s; }
-a.button, header nav a, #slider .arrow .arrow_button, #aboutus .social_icons a svg path, #services .container .item .noize, #download .container .item a.more,
+a.button, header .toggle_menu, header nav a, #slider .arrow .arrow_button, #aboutus .social_icons a svg path, #services .container .item .noize, #download .container .item a.more,
 #download .container .item a.more:visited, #messege input[type="text"]::placeholder,
 #messege textarea::placeholder, #messege input[type="submit"], footer .footer_menu .item a, footer .footer_menu .social a.vk svg path,
 footer .footer_menu .social a.facebook svg path,
@@ -252,6 +252,9 @@ body {
   min-width: 360px;
   margin: auto; }
 
+/*.page_wrapper {
+    filter: blur(3px);
+}*/
 h2 {
   margin-bottom: 40px;
   font-family: Exo;
@@ -349,6 +352,7 @@ a.button {
 header {
   background: #f2f2f2; }
   header .wrapper .content {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -362,6 +366,20 @@ header {
     background: #F7F7F7;
     border-right: 1px solid #ededed;
     border-left: 1px solid #ededed; }
+  header .header_logo_min {
+    display: none;
+    width: 50px;
+    height: 50px; }
+    header .header_logo_min svg {
+      display: block;
+      width: 100%;
+      height: 100%; }
+      header .header_logo_min svg .fil0 {
+        fill: #EFEEEE; }
+      header .header_logo_min svg .fil1 {
+        fill: #428A98; }
+      header .header_logo_min svg .fil2 {
+        fill: #F33A3D; }
   header .header_logo {
     width: 200px; }
     header .header_logo svg {
@@ -376,6 +394,25 @@ header {
         fill: #F33A3D; }
     header .header_logo a {
       display: block; }
+  header .toggle_menu {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background: #EFEEEE;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden; }
+    header .toggle_menu:hover {
+      background: #eae9e9; }
+    header .toggle_menu .line {
+      width: 100%;
+      height: 3px;
+      background: #428A98; }
+      header .toggle_menu .line:nth-child(2) {
+        margin-top: 6px; }
+      header .toggle_menu .line:nth-child(3) {
+        margin-top: 6px; }
   header nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -683,7 +720,9 @@ header {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
     #messege .inputs div {
       width: 48%; }
   #messege input[type="text"] {
@@ -852,6 +891,13 @@ footer {
     color: #5b5b5b;
     text-align: center; }
 
+@media (max-width: 992px) {
+  #clients .container .item img {
+    max-height: 80px;
+    max-width: 200px; }
+
+  #messege .inputs {
+    padding: 0px 50px; } }
 @media (max-width: 768px) {
   h2 {
     margin-bottom: 10px;
@@ -863,12 +909,24 @@ footer {
   #services .content,
   #download .wrapper,
   #clients .wrapper,
-  #contacts .wrapper {
+  #contacts .wrapper,
+  #feedback .content,
+  footer .wrapper {
     border-right: 0;
     border-left: 0; }
 
   header .wrapper .content {
     padding: 0 10px; }
+  header .header_logo_min {
+    display: block; }
+  header .header_logo {
+    display: none; }
+  header .toggle_menu {
+    display: block; }
+  header nav {
+    position: absolute;
+    top: 100%;
+    z-index: 99; }
 
   #aboutus .text_wrapper {
     padding-right: 0; }
@@ -914,6 +972,20 @@ footer {
       #contacts .container .item .image {
         margin-bottom: 5px; }
 
+  #feedback .content {
+    padding: 10px; }
+
+  #messege {
+    margin-top: 0; }
+    #messege .inputs {
+      padding: 0; }
+      #messege .inputs div, #messege .inputs textarea {
+        width: 100%; }
+      #messege .inputs input[type="text"] {
+        margin-bottom: 15px; }
+    #messege input[type=submit] {
+      margin-top: 15px; }
+
   footer .wrapper .content {
     padding: 10px; }
   footer .footer_menu .item {
@@ -928,12 +1000,5 @@ footer {
             justify-content: center; }
   footer .copyright {
     margin-top: 10px; } }
-@media (max-width: 992px) {
-  #clients .container .item img {
-    max-height: 80px;
-    max-width: 200px; }
-
-  #messege .inputs {
-    padding: 0px 50px; } }
 
 /*# sourceMappingURL=main.css.map */
