@@ -1,19 +1,19 @@
-//////////////////// ПРЕЛОАДЕР
-// document.body.onload = function() {
-// 	// выполним функцию после определенного кол-во времени
-// 	setTimeout( function() {
-// 		var preloader = document.getElementById('preloader');	// выбираем div
+////////////////// ПРЕЛОАДЕР
+document.body.onload = function() {
+	// выполним функцию после определенного кол-во времени
+	setTimeout( function() {
+		var preloader = document.getElementById('preloader');	// выбираем div
 			
-// 			// если в списке классов нет класса "done"
-// 			if ( !preloader.classList.contains('done') ) {
+			// если в списке классов нет класса "done"
+			if ( !preloader.classList.contains('done') ) {
 
-// 				// то добавим его (скрываем прелоадер)
-// 				preloader.classList.add('done');	
-// 			}
+				// то добавим его (скрываем прелоадер)
+				preloader.classList.add('done');	
+			}
 
-// 	// даже после загрузки страницы видно прелоадер 500мск
-// 	}, 500);
-// }
+	// даже после загрузки страницы видно прелоадер 500мск
+	}, 500);
+}
 
 
 //////////////////// ЗАПРЕТ СКРОЛЛА КАРТЫ GOOGLE MAPS

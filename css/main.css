@@ -205,22 +205,34 @@ input[type=button] {
   src: url("../fonts/Exo2-MediumItalic.ttf") format("truetype"); }
 a.button, header nav a, #slider .arrow .arrow_button, #aboutus .social_icons a svg path, #services .container .item .noize, #download .container .item a.more,
 #download .container .item a.more:visited, #messege input[type="text"]::-webkit-input-placeholder,
-#messege textarea::-webkit-input-placeholder, #messege input[type="submit"], #footer h3.title a, #footer li a, #footer ul.social svg .facebook, #footer ul.social svg .vk, #footer ul.social svg .google, #footer ul.social svg .mail, #footer ul.social svg .white {
+#messege textarea::-webkit-input-placeholder, #messege input[type="submit"], footer .footer_menu .item a, footer .footer_menu .social a.vk svg path,
+footer .footer_menu .social a.facebook svg path,
+footer .footer_menu .social a.google svg path,
+footer .footer_menu .social a.mail svg path {
   -webkit-transition: 0.2s;
   transition: 0.2s; }
 a.button, header nav a, #slider .arrow .arrow_button, #aboutus .social_icons a svg path, #services .container .item .noize, #download .container .item a.more,
 #download .container .item a.more:visited, #messege input[type="text"]:-ms-input-placeholder,
-#messege textarea:-ms-input-placeholder, #messege input[type="submit"], #footer h3.title a, #footer li a, #footer ul.social svg .facebook, #footer ul.social svg .vk, #footer ul.social svg .google, #footer ul.social svg .mail, #footer ul.social svg .white {
+#messege textarea:-ms-input-placeholder, #messege input[type="submit"], footer .footer_menu .item a, footer .footer_menu .social a.vk svg path,
+footer .footer_menu .social a.facebook svg path,
+footer .footer_menu .social a.google svg path,
+footer .footer_menu .social a.mail svg path {
   -webkit-transition: 0.2s;
   transition: 0.2s; }
 a.button, header nav a, #slider .arrow .arrow_button, #aboutus .social_icons a svg path, #services .container .item .noize, #download .container .item a.more,
 #download .container .item a.more:visited, #messege input[type="text"]::-ms-input-placeholder,
-#messege textarea::-ms-input-placeholder, #messege input[type="submit"], #footer h3.title a, #footer li a, #footer ul.social svg .facebook, #footer ul.social svg .vk, #footer ul.social svg .google, #footer ul.social svg .mail, #footer ul.social svg .white {
+#messege textarea::-ms-input-placeholder, #messege input[type="submit"], footer .footer_menu .item a, footer .footer_menu .social a.vk svg path,
+footer .footer_menu .social a.facebook svg path,
+footer .footer_menu .social a.google svg path,
+footer .footer_menu .social a.mail svg path {
   -webkit-transition: 0.2s;
   transition: 0.2s; }
 a.button, header nav a, #slider .arrow .arrow_button, #aboutus .social_icons a svg path, #services .container .item .noize, #download .container .item a.more,
 #download .container .item a.more:visited, #messege input[type="text"]::placeholder,
-#messege textarea::placeholder, #messege input[type="submit"], #footer h3.title a, #footer li a, #footer ul.social svg .facebook, #footer ul.social svg .vk, #footer ul.social svg .google, #footer ul.social svg .mail, #footer ul.social svg .white {
+#messege textarea::placeholder, #messege input[type="submit"], footer .footer_menu .item a, footer .footer_menu .social a.vk svg path,
+footer .footer_menu .social a.facebook svg path,
+footer .footer_menu .social a.google svg path,
+footer .footer_menu .social a.mail svg path {
   -webkit-transition: 0.2s;
   transition: 0.2s; }
 
@@ -513,13 +525,11 @@ header {
           right: 0;
           padding: 15px;
           text-align: center;
-          font-size: 25px;
+          font-size: 1.2em;
           text-transform: uppercase;
-          font-weight: 300;
-          color: #FFFFFF;
-          /*background-color: rgba(0,0,0,.9);*/
-          /*background-color: rgba(51,107,119,.9);*/
-          background-color: rgba(66, 138, 152, 0.9); }
+          font-weight: 400;
+          color: #000;
+          background-color: rgba(255, 255, 255, 0.9); }
       #services .container .item:hover .noize {
         background-color: rgba(255, 255, 255, 0.2); }
 
@@ -765,63 +775,72 @@ header {
       outline: npne;
       background: #d51c1f; }
 
-#footer {
+footer {
   background: #2e2e2e; }
-  #footer .content {
+  footer .wrapper {
     background: #333;
     border-right: 1px solid #292929;
     border-left: 1px solid #292929;
     color: #E9EAEE;
     padding-bottom: 10px; }
-  #footer .item {
-    float: left;
-    width: 25%;
-    margin: 0;
-    padding: 15px; }
-  #footer h3.title {
-    margin: 0;
-    padding: 0;
-    text-align: left; }
-    #footer h3.title a {
-      font-weight: 400;
-      color: #dbdada;
-      text-decoration: none; }
-      #footer h3.title a:hover {
-        text-decoration: none;
-        color: #bdbcbc; }
-  #footer li a {
-    font-weight: 300;
-    color: #bdbcbc;
-    text-decoration: none; }
-    #footer li a:hover {
-      color: #9f9e9e;
-      /*text-decoration: underline;*/ }
-  #footer ul.social {
-    display: block;
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    #footer ul.social li {
+    footer .wrapper .content {
+      padding: 50px 15px 5px 15px; }
+  footer .footer_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    footer .footer_menu .item a {
       display: block;
-      width: 40px;
-      height: 40px;
-      float: left;
-      margin-right: 7px; }
-    #footer ul.social svg .white {
-      fill: #c7c6c6; }
-    #footer ul.social svg .facebook, #footer ul.social svg .vk, #footer ul.social svg .google, #footer ul.social svg .mail {
-      fill: #333; }
-    #footer ul.social svg:hover .white {
-      fill: #FFF; }
-    #footer ul.social svg:hover .facebook {
-      fill: #3B5998; }
-    #footer ul.social svg:hover .vk {
-      fill: #4D76A1; }
-    #footer ul.social svg:hover .google {
-      fill: #DC4E41; }
-    #footer ul.social svg:hover .mail {
-      fill: #428A98; }
-  #footer .copyright {
+      font-weight: 300;
+      color: #dbdada;
+      text-decoration: none;
+      margin-bottom: 4px; }
+      footer .footer_menu .item a:hover {
+        color: #bdbcbc; }
+    footer .footer_menu .item a.title {
+      text-transform: uppercase;
+      font-weight: 400; }
+    footer .footer_menu .social {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+      footer .footer_menu .social a.vk,
+      footer .footer_menu .social a.facebook,
+      footer .footer_menu .social a.google,
+      footer .footer_menu .social a.mail {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 5px; }
+        footer .footer_menu .social a.vk svg,
+        footer .footer_menu .social a.facebook svg,
+        footer .footer_menu .social a.google svg,
+        footer .footer_menu .social a.mail svg {
+          display: block;
+          width: 100%;
+          height: 100%; }
+          footer .footer_menu .social a.vk svg path,
+          footer .footer_menu .social a.facebook svg path,
+          footer .footer_menu .social a.google svg path,
+          footer .footer_menu .social a.mail svg path {
+            fill: #dbdada; }
+      footer .footer_menu .social a.vk:hover {
+        background: #4D76A1; }
+      footer .footer_menu .social a.facebook:hover {
+        background: #3B5998; }
+      footer .footer_menu .social a.google:hover {
+        background: #DC4E41; }
+      footer .footer_menu .social a.mail:hover {
+        background: #428A98; }
+  footer .copyright {
     margin: 0 auto;
     margin-top: 40px;
     font-weight: 300;

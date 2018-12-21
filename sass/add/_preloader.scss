@@ -1,4 +1,3 @@
-/////////////////////////////// ПРЕЛОАДЕР
 #preloader {
 	position: fixed;
 	width: 100%;
@@ -44,10 +43,10 @@
 				height: 100px;
 
 				.fil0 {
-					fill:#428A98
+					fill: $firm_normal;
 				}
 				.fil1 {
-					fill:#F33A3D;
+					fill: $firm_akcent;
 				}
 			}
 		}
@@ -56,5 +55,5 @@
 
 @keyframes spin {
 	from { transform: translate(-50%, -50%) rotate(0deg); }
-	to {     transform: translate(-50%, -50%) rotate(360deg); }
+	to { transform: translate(-50%, -50%) rotate(360deg); }
 }
