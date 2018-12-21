@@ -1,43 +1,53 @@
-/////////////////////////////// ШАПКА
-#header {
-	background: $bg_light - 5;
+header {
+    background: $bg_light - 5;
+    
+    .wrapper {
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            background: $bg_light;
+            border-right: 1px solid $bg_light - 10;
+            border-left: 1px solid $bg_light - 10;
+        }
+    }
 
-	.content {
-		padding: 0 5%;
-		background: $bg_light;
-	}
+    .header_logo {
+        width: 200px;
 
-	.header_logo {
-		width: 200px;
+        svg {
+            display: block;
+            width: 100%;
+            height: auto;
 
-		svg {
-			display: block;
-			width: 100%;
-			height: auto;
-			margin-top: 10px;
+            .fill_1 { fill: $bg_firm; }
+            .fill_2 { fill: $firm_normal; }
+            .fill_3 { fill: $firm_akcent; }
+        }
 
-			.fill_1 { fill: $bg_firm; }
-			.fill_2 { fill: $firm_normal; }
-			.fill_3 { fill: $firm_akcent; }
-		}
-	}
+        a {
+            display: block;
+        }
+    }
 
-	ul {
-		li { float: left; }
+    nav {
+        display: flex;
+        justify-content: center;
 
-		a {
-			display: block;
-			padding: 30px 10px;
-			font-size: 0.9em;
-			text-decoration: none;
-			text-transform: uppercase;
-			color: $firm_dark;
-			@extend %animation;
+        a {
+            display: block;
+            padding: 30px 10px;
+            font-size: 0.9em;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $firm_dark;
+            @extend %animation;
 
-			&:hover {
-				color: $firm_akcent;
-				background: $bg_light - 5;
-			}
-		}
-	}
+            &:hover {
+                color: $firm_akcent;
+                background: $bg_light - 5;
+            }
+        }
+    }
 }

@@ -1,54 +1,55 @@
-/////////////////////////////// СЛАЙДЕР
-#slider {
-	$bg: $bg_dark;
-	background: $bg - 5;
-	width: 100%;
-
-	.content {
-		position: relative;
-		padding: 0;
-		background: $bg;
-		border-right: 1px solid $bg - 10;
-		border-left:   1px solid $bg - 10;
-
-		.img_slides {
-			display: block;
-			width: 100%;
-		}
-	}
-
-	.nav {
-		position: absolute;
-		width: 100%;
-		top: 50%;
-		left: 0;
-		transform: translate(0, -50%);
-
-		.nav_button {
-			cursor: pointer;
-			font-size: 3em;
-			padding: 20px;
-			color: $font_color_light;
-			@extend %animation;
-
-			&:hover {
-				color: $firm_akcent;
-				/*color: $font_color_light + 30;*/
-				background: rgba(0,0,0,0.05);
-			}
-		}
-	}
-}
-
-.fading {
-	animation: fading 1.5s;
-}
 @keyframes fading {
-	0% {
-		opacity: 0.5;
-	}
+    0% {
+        opacity: 0.5;
+    }
 
-	100% {
-		opacity: 1;
-	}
+    100% {
+        opacity: 1;
+    }
+}
+
+#slider {
+    background: $bg_dark - 5;
+
+    .content {
+        border-right: 1px solid $bg_dark - 10;
+        border-left: 1px solid $bg_dark - 10;
+        position: relative;
+
+        .img_slides {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translate(0, -50%);
+        width: 100%;
+
+        .arrow_button {
+            $size: 70px;
+            width: $size;
+            height: $size;
+            cursor: pointer;
+            font-size: 30px;
+            line-height: $size;
+            text-align: center;
+            border-radius: 50%;
+            color: $font_color_light;
+            @extend %animation;
+
+            &:hover {
+                color: $firm_akcent;
+                background: rgba(0,0,0,0.02);
+            }
+        }
+    }
+
+    .fading {
+        animation: fading 1.5s;
+    }
 }

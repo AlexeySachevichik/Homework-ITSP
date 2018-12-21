@@ -1,79 +1,72 @@
-/////////////////////////////// О НАС
 #aboutus {
-	$bg: $bg_light;
+    background: $bg_light - 5;
 
-	background: $bg - 5;
+    .content {
+        padding: 50px 0;
+        border-right: 1px solid $bg_light - 10;
+        border-left: 1px solid $bg_light - 10;
+        background: url("../img/fon_logos_light.png") center no-repeat $bg_light;
+        background-position: cover;
+    }
 
-	.content {
-		position: relative;
-		border-right: 1px solid $bg - 10;
-		border-left:   1px solid $bg - 10;
-		background: url("../img/fon_logos_light.png") center no-repeat $bg;
-		background-position: cover;
-	}
-	
-	p, li {
-		padding-right: 20%; 
-	}
+    .text_wrapper {
+        position: relative;
+        padding-right: 150px;
 
-	p, li,
-	span.important {
-		font-weight: 300;
-	}
+        p, li, span.important {
+            font-weight: 300;
+            font-size: 17px;
+        }
 
-	p {
-		margin: 20px;
-		text-indent: 1em;
-	}
+        p {
+            text-indent: 17px;
+            margin: 20px;
+            margin-right: 0;
+        }
 
-	span.important {
-		font-weight: 400;
-		text-transform: uppercase;
-	}
+        span.important {
+            font-weight: 400;
+            text-transform: uppercase;
+        }
 
-	ul {
-		list-style: circle;
-		margin-left: 70px;
-	}
+        ul {
+            list-style: circle;
+            margin-left: 70px;
+        }
+    }
 
-	ul.social {
-		display: block;
-		position: absolute;
-		right: 10%;
-		top: 27%;
-		list-style: none;
-		margin: 0;
-		padding: 0;
+    .social_icons {
+        position: absolute;
+        right: 50px;
+        top: 0;
 
-		li {
-			$size_icon: 60px;
+        a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1px solid $bg_firm - 30 ;
+            background: $bg_light;
 
-			display: block;
-			width: $size_icon;
-			height: $size_icon;
-			margin: 0;
-			margin-bottom: 15px;
-			padding: 0;
-			border-radius: 50%;
-			border: 1px solid $bg_firm - 30 ;
+            &:hover {
+                border: 1px solid transparent;
 
-			&:hover {
-				border: 1px solid transparent;
-			}
-		}
+                svg path {
+                    fill: $bg_normal;
+                }
+            }
 
-		svg {
-			.facebook, .vk, .google, .mail, .white { @extend %animation; }
-			.white { fill: $firm_normal; }
-			.facebook, .vk, .google, .mail { fill: $bg_light; }
-		}
+            svg path {
+                    @extend %animation;
+                    fill: $firm_normal;
+            }
+        }
 
-		svg:hover {
-			.white { fill: #FFF; }
-			.facebook { fill: #3B5998; }
-			.vk { fill: #4D76A1; }
-			.google { fill: #DC4E41; }
-			.mail { fill: $firm_normal; }
-		}
-	}
+        a.facebook:hover { background: #3B5998; }
+        a.vk:hover { background: #4D76A1; }
+        a.google:hover { background: #DC4E41; }
+        a.mail:hover { background: $firm_normal; }
+    }
 }

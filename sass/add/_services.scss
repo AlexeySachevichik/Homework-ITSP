@@ -1,74 +1,52 @@
-/////////////////////////////// УСЛУГИ
 #services {
-	$bg: $firm_normal;
-
-	background: $bg - 5;
+	background: $firm_normal - 5;
 
 	.content {
-		/*padding-bottom: 0;*/
-		background: $bg;
-		border-right: 1px solid $bg - 10;
-		border-left:   1px solid $bg - 10;
+		padding: 50px 0;
+		background: $firm_normal;
+		border-right: 1px solid $firm_normal - 10;
+		border-left:   1px solid $firm_normal - 10;
 	}
 
-	h2.title {
+	h2 {
 		color: $bg_light;
-		margin-bottom: 30px;
 	}
 
-	.wrap {
+	.container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
 		.item {
 			position: relative;
-			float: left;
 			width: 50%;
 			height: 320px;
-			background: $bg_light;
-			text-align: center;
-
-			&:hover {
-				.noize {
-					background-color: rgba(0,0,0,0);
-				}
-			};
 
 			.noize {
+				opacity: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 50px;
 				position: absolute;
 				top: 0;
 				bottom: 0;
 				left: 0;
 				right: 0;
-				background: rgba(0,0,0,.2);
+				background-color: rgba(0,0,0,.6);
 				@extend %animation;
+
+				p {
+					text-align: center;
+					font-size: 25px;
+					color: $bg_normal;
+				}
 			}
 
-			h3.title {
-				display: block;
-				position: absolute;
-				padding: 10px;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				background: rgba(255,255,255,.9);
-			}
-
-			&:nth-child(1) {
-				background: url(../img/remont.jpg) no-repeat center center $firm_normal;
-				background-size: cover;
-			}
-
-			&:nth-child(2) {
-				background: url(../img/kartr.jpg) no-repeat center center $firm_normal;
-				background-size: cover;
-			}
-
-			&:nth-child(3) {
-				background: url(../img/local.jpg) no-repeat center center $firm_normal;
-				background-size: cover;
-			}
-
-			&:nth-child(4) {
-				background: url(../img/proda.jpg) no-repeat center center $firm_normal;
-				background-size: cover;
+			&:hover {
+				.noize {
+					opacity: 1;
+				}
 			}
 		}
 	}

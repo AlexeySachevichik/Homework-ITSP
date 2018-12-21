@@ -1,19 +1,19 @@
 //////////////////// ПРЕЛОАДЕР
-document.body.onload = function() {
-	// выполним функцию после определенного кол-во времени
-	setTimeout( function() {
-		var preloader = document.getElementById('preloader');	// выбираем div
+// document.body.onload = function() {
+// 	// выполним функцию после определенного кол-во времени
+// 	setTimeout( function() {
+// 		var preloader = document.getElementById('preloader');	// выбираем div
 			
-			// если в списке классов нет класса "done"
-			if ( !preloader.classList.contains('done') ) {
+// 			// если в списке классов нет класса "done"
+// 			if ( !preloader.classList.contains('done') ) {
 
-				// то добавим его (скрываем прелоадер)
-				preloader.classList.add('done');	
-			}
+// 				// то добавим его (скрываем прелоадер)
+// 				preloader.classList.add('done');	
+// 			}
 
-	// даже после загрузки страницы видно прелоадер 500мск
-	}, 500);
-}
+// 	// даже после загрузки страницы видно прелоадер 500мск
+// 	}, 500);
+// }
 
 
 //////////////////// ЗАПРЕТ СКРОЛЛА КАРТЫ GOOGLE MAPS
@@ -78,3 +78,27 @@ document.body.onload = function() {
 	setInterval(function() {
 		moveRight();
 	}, duration);
+
+
+
+
+
+$(document).ready( function(){
+
+	var images = $('#services .container .item img');
+
+	for(var i = 0; i < images.length; i++ ){
+
+		var img = $('#services .container .item:eq(' + i + ') img');
+			src = img.attr('src'),
+			par = img.parent();
+		
+		img.remove();
+		par.css('background', 'url("' + src + '")');
+		par.css('background-size', 'cover');
+		par.css('background-repeat', 'no-repeat');
+		par.css('background-position', 'center center');
+	}
+
+
+});
