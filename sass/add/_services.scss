@@ -23,29 +23,33 @@
 			height: 320px;
 
 			.noize {
-				opacity: 0;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				padding: 50px;
 				position: absolute;
 				top: 0;
 				bottom: 0;
 				left: 0;
 				right: 0;
-				background-color: rgba(0,0,0,.6);
 				@extend %animation;
 
 				p {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					padding: 15px;
 					text-align: center;
 					font-size: 25px;
+					text-transform: uppercase;
+					font-weight: 300;
 					color: $bg_normal;
+					/*background-color: rgba(0,0,0,.9);*/
+					/*background-color: rgba(51,107,119,.9);*/
+					background-color: rgba(66,138,152,.9);
 				}
 			}
 
 			&:hover {
 				.noize {
-					opacity: 1;
+					background-color: rgba(255,255,255,.2);
 				}
 			}
 		}
